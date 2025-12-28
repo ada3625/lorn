@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+     <script src="server.js"></script>
+
+
+<script>
+    document.getElementById("btn").addEventListener("click", function () {
+        alert("تم الضغط!");
+    });
+</script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="UTF-8">
+    <title>محرك بحث</title>
+
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --box-color: #ffffff;
+            --border-color: #dfe1e5;
+            --button-color: #f8f9fa;
+        }
+
+        body.dark {
+            --bg-color: #121212;
+            --text-color: #ffffff;
+            --box-color: #202124;
+            --border-color: #5f6368;
+            --button-color: #303134;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        .toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            padding: 8px 14px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            background-color: var(--button-color);
+        }
+
+        .logo {
+            font-size: 80px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+       .logo span:nth-child(1) { color: #4285F4; }
+.logo span:nth-child(2) { color: #EA4335; }
+.logo span:nth-child(3) { color: #FBBC05; }
+.logo span:nth-child(4) { color: #34A853; }
+
+
+        form {
+            width: 500px;
+            max-width: 90%;
+        }
+
+        .search-box {
+            display: flex;
+            padding: 12px 18px;
+            border-radius: 24px;
+            border: 1px solid var(--border-color);
+            background-color: var(--box-color);
+        }
+
+        .search-box input {
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            background: transparent;
+            color: var(--text-color);
+        }
+
+        .buttons {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .buttons button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: var(--button-color);
+            color: var(--text-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="toggle" onclick="toggleMode()">🌙 / ☀️</div>
+
+    <div class="logo lorn-logo">
+    l<span>o</span>rn
+</div>
+
+
+
+    <!-- البحث الحقيقي -->
+        <form action="https://www.google.com/search" method="GET" target="_blank">
+    <div class="search-box">
+        <input type="text" name="q" placeholder="ابحث في الويب" required>
+    </div>
+
+    <div class="buttons">
+        <button type="submit">بحث lorn</button>
+        <button type="submit" name="btnI" value="1">ضربة حظ</button>
+    </div>
+</form>
+
+    </form>
+
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle("dark");
+        }
+    </script>
+
+</body>
+</html>
+
